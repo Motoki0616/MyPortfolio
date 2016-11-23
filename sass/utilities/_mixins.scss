@@ -1,0 +1,27 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// Media queries
+
+
+@mixin mq($break) {
+  @if $break == "large" {
+    @media (max-width: 1130px) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (max-width: 769px) {
+      @content;
+    }
+  }
+  @else if $break == "small" {
+    @media (max-width: 500px) {
+      @content;
+    }
+  }
+   @else {
+    @error "Whoops! No value could be retrieved for `#{$break}`. "
+  }
+}

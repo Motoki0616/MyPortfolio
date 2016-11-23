@@ -1,0 +1,99 @@
+.contact {
+	width: 90%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: $color-text;
+	z-index: 200;
+	h2 {
+		font-size: 3.5rem;
+		margin-bottom: 40px;
+		letter-spacing: 0.03em;
+	}
+}
+.contact-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.form-group {
+		width: 47%;
+		label {
+			display: block;
+			width: 80px;
+			font-size: 1.6rem;
+			letter-spacing: 0.04em;
+			margin-bottom: 10px;
+		}
+		input {
+			display: block;
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid $color-text;
+			width: 100%;
+			color: $color-text;
+			font-size: 1.6rem;
+			padding-bottom: 3px;
+		}
+		textarea {
+			display: block;
+			width: 100%;
+			height: 50px;
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid $color-text;
+			color: $color-text;
+			font-size: 1.6rem;
+		}
+	}
+
+	.form-message {
+		width: 100%;
+		margin: 40px 0;
+	}
+
+	.btn-submit {
+		display: block;
+		background-color: transparent;
+		border: none;
+		color: $color-key;
+		font-size: 1.6rem;
+		letter-spacing: 0.04em;
+		text-align: left;
+		padding: 0 0 5px 0;
+		font-family: $font-family--primary;
+		cursor: pointer;
+		&:after {
+			display: block;
+			content: "";
+			margin-top: 3px;
+			width: 100%;
+			height: 1px;
+			background-color: $color-key;
+			transform: scaleX(0);
+			transform-origin: 0 50%;
+			transition: all .2s linear;
+		}
+		&:hover {
+			&:after {
+				transform: scaleX(1);
+			}
+		}
+	}
+}
+
+.sns {
+	margin-top: 30px;
+	width: 30%;
+	display: flex;
+	.sns__item {
+		width: 25%;
+		a {
+			color: $color-text;
+			&:hover {
+				color: $color-key;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,19 @@
+.main-about {
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: 	$color-text;
+	text-align: center;
+	z-index: 200;
+	.main-about__title {
+		font-size: 6.5rem;
+		letter-spacing: 0.13em;
+	}
+	.main-about__description {
+		font-size: 2.5rem;
+		letter-spacing: 0.05em;
+		font-family: $font-family--secondary;
+	}
+}

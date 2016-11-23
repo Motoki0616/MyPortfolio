@@ -1,0 +1,46 @@
+*:hover, *:focus {
+	outline: none;
+}
+html,body {
+	margin: 0;
+	padding: 0;
+}
+ul, ol, li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+dl,dt,dd {
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}
+p {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	background-color: $color-main;
+	font-family: $font-family--primary;
+}
+a {
+	color: $color-key;
+	text-decoration: none;
+	cursor: pointer;
+}
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: block;
+}

@@ -1,0 +1,41 @@
+.aboutme {
+	width: 70%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: $color-text;
+	display: flex;
+	justify-content: space-between;
+	z-index: 100;
+	p {
+		font-size: 1.6rem;
+		font-family: $font-family--secondary;
+		line-height: 1.5em;
+	}
+}
+.aboutme__left {
+	width: 40%;
+	position: relative;
+	margin-top: 5%;
+}
+.aboutme__right {
+	position: relative;
+	width: 45%;
+	margin-top: -5%;
+	h2 {
+		font-size: 8rem;
+    	margin-bottom: 40px;
+    	letter-spacing: 0.03em;
+    	line-height: 1em;
+    	position: absolute;
+    	right: 0;
+    	z-index: 100;
+    	margin-top: 50px;
+	}
+	.photo-myself img {
+		width: 75%;
+		max-width: 480px;
+		position: absolute;
+	}
+}
