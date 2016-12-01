@@ -9,11 +9,23 @@
 	z-index: 200;
 	.main-about__title {
 		font-size: 6.5rem;
+		line-height: 1.5em;
 		letter-spacing: 0.13em;
+		@include mq("medium") {
+			font-size: 3rem;
+			line-height: 1.2em;
+			margin-bottom: 20px;
+		}
 	}
 	.main-about__description {
 		font-size: 2.5rem;
 		letter-spacing: 0.05em;
+		line-height: 1.5em;
 		font-family: $font-family--secondary;
+		@include mq("medium") {
+			font-size: 1.5rem;
+			letter-spacing: 0.05em;
+			line-height: 1.2em;
+		}
 	}
 }

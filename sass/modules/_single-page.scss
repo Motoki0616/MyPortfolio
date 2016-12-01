@@ -1,17 +1,11 @@
-.box-line {
-	width: calc(100% - 60px);
-	margin: 30px 0 30px 30px;
-	position: relative;
-	border: 1px solid $color-key;
-}
 .work-detail {
 	color: $color-text;
 	width: 70%;
 	margin: 150px auto 0;
 	h2 {
-		font-size: 8rem;
+		font-size: 7.5rem;
     	letter-spacing: 0.03em;
-    	line-height: 1em;	
+    	line-height: 1em;
     	&:after {
     		content: "";
     		display: block;
@@ -44,7 +38,7 @@
 		dt {
 			font-size: 1rem;
 			letter-spacing: 0.05em;
-    		line-height: 1em;	
+    		line-height: 1em;
 			margin-bottom: 10px;
 		}
 		dd {
@@ -55,13 +49,21 @@
 	}
 }
 
-.desktop-image {
+.desktop-image img {
 	margin: 100px 0;
+}
+
+.mobile-image {
+	margin-top: 100px;
 }
 
 .navigation {
 	margin: 100px 0;
 	p {
 		display: inline-block;
+		margin-right: 20px;
+		a {
+			font-size: 1.4rem;
+		}
 	}
 }

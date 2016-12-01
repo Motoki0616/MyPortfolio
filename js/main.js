@@ -1,11 +1,32 @@
+$(document).one('ready',function(){
+	var $borderTop = $('.border-box__top');
+	var $borderRight = $('.border-box__right');
+	var $borderBottom = $('.border-box__bottom');
+	var $borderLeft = $('.border-box__left');
+	var $navItem = $('.nav__item');
+	var $logo = $('.logo');
+	var $mainTitle = $('.main-about__title');
+	var $mainDescription = $('.main-about__description');
+
+	var tlBorder = new TimelineMax();
+	tlBorder
+	.set($borderTop, {scale: 0, opacity: 0})
+	.set($borderRight, {scale: 0, opacity: 0})
+	.set($borderBottom, {scale: 0, opacity: 0})
+	.set($borderLeft, {scale: 0, opacity: 0})
+	.to($borderTop, 0.2, {scale: 1, opacity: 1}, '+=0.3')
+	.to($borderRight, 0.2, {scale: 1, opacity: 1})
+	.to($borderBottom, 0.2, {scale: 1, opacity: 1})
+	.to($borderLeft, 0.2, {scale: 1, opacity: 1})
+	.from($logo, 0.2, {y: '-20', opacity: 0, clearProps: 'all'})
+	.staggerFrom($navItem, 0.2, {y: '-20', opacity: 0, clearProps: 'all'}, 0.1)
+	.from($mainTitle, 0.2, {y: '-20', opacity: 0, clearProps: 'all'})
+	.from($mainDescription, 0.2, {y: '-20', opacity: 0, clearProps: 'all'});
+
+});
+
 $(document).ready(function() {
 	$('body').onPageLoad();
-	// var $borderTop = $('.border-box__top');	
-	// var $borderRight = $('.border-box__right');
-	// var $borderBottom = $('.border-box__bottom');
-	// var $borderLeft = $('.border-box__left');
-	// var $navItem = $('.nav__item');
-	// var $logo = $('.logo');
 
 	var $page = $('#wrapper'),
 			options = {
@@ -17,7 +38,7 @@ $(document).ready(function() {
 					$('.cover').addClass('page-is-changing');
 					$('.cover2').addClass('page-is-changing');
 					setTimeout(function(){
-						$('.loading-bar').addClass('page-is-changing');	
+						$('.loading-bar').addClass('page-is-changing');
 					}, 500);
 
 					if ( $('.fp-enabled').length ) {
@@ -25,7 +46,7 @@ $(document).ready(function() {
 							$.fn.fullpage.destroy('all');
 						}, 350);
         			}
-				}	
+				}
 			},
 				onReady: {
 				duration: 1300,
@@ -49,7 +70,7 @@ $(document).ready(function() {
 			},
 			smoothState = $page.smoothState(options).data('smoothState');
 });
-			
+
 	$.fn.onPageLoad = function() {
 	$('#fullpage').fullpage({
 	navigation: true,

@@ -12,7 +12,7 @@
     }
   }
   @else if $break == "medium" {
-    @media (max-width: 769px) {
+    @media (max-width: 950px) {
       @content;
     }
   }

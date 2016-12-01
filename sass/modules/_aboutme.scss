@@ -1,13 +1,17 @@
 .aboutme {
 	width: 70%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
+	height: calc(100vh - 60px);
+	margin: 0 auto;
 	color: $color-text;
 	display: flex;
 	justify-content: space-between;
 	z-index: 100;
+	@include mq("medium") {
+		width: 80%;
+		height: 100%;
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
 	p {
 		font-size: 1.6rem;
 		font-family: $font-family--secondary;
@@ -16,13 +20,20 @@
 }
 .aboutme__left {
 	width: 40%;
-	position: relative;
-	margin-top: 5%;
+	margin-top: 25vh;
+	@include mq("medium") {
+		width: 100%;
+		margin-bottom: 50px;
+		margin-top: 20px;
+	}
 }
 .aboutme__right {
 	position: relative;
 	width: 45%;
-	margin-top: -5%;
+	margin-top: 20vh;
+	@include mq("medium") {
+		width: 100%;
+	}
 	h2 {
 		font-size: 8rem;
     	margin-bottom: 40px;
@@ -36,6 +47,8 @@
 	.photo-myself img {
 		width: 75%;
 		max-width: 480px;
-		position: absolute;
+		@include mq("medium") {
+			width: 80%;
+		}
 	}
 }

@@ -1,3 +1,6 @@
+.logo {
+
+}
 .navbar {
 	width: 90%;
 	color: $color-key;
@@ -5,7 +8,11 @@
 	left: 50%;
 	top: 60px;
 	transform: translateX(-50%);
-	z-index: 100;
+	z-index: 101;
+	@include mq("medium") {
+		width: 80%;
+		top: 40px;
+	}
 }
 .nav {
 	position: absolute;
@@ -18,6 +25,9 @@
 	letter-spacing: 0.1em;
 	a {
 		font-size: 1.3rem;
+		@include mq("medium") {
+			font-size: 1rem;
+		}
 		&:after {
 			display: block;
 			content: "";
@@ -34,21 +44,5 @@
 				transform: scaleX(1);
 			}
 		}
-	}
-}
-
-.page-nav {
-	position: fixed;
-	z-index: 100;
-	left: 5%;
-	top: 50%;
-	transform: translateY(-50%);
-	.page-nav__item a {
-		display: block;
-		width: 15px;
-		height: 15px;
-		border-radius: 50%;
-		background-color: $color-main;
-		margin-bottom: 5px;
 	}
 }

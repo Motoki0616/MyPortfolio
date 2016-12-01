@@ -6,10 +6,18 @@
 	transform: translate(-50%,-50%);
 	color: $color-text;
 	z-index: 200;
+	@include mq("medium") {
+		width: 80%;
+	}
 	h2 {
 		font-size: 3.5rem;
 		margin-bottom: 40px;
 		letter-spacing: 0.03em;
+		@include mq("small") {
+			font-size: 2rem;
+			margin-bottom: 0px;
+			margin-top: 40px;
+		}
 	}
 }
 .contact-form {
@@ -18,12 +26,19 @@
 	justify-content: space-between;
 	.form-group {
 		width: 47%;
+		@include mq("small") {
+			width: 100%;
+		}
 		label {
 			display: block;
 			width: 80px;
 			font-size: 1.6rem;
 			letter-spacing: 0.04em;
 			margin-bottom: 10px;
+			@include mq("small") {
+				font-size: 1rem;
+				margin-top: 40px;
+			}
 		}
 		input {
 			display: block;
@@ -34,6 +49,9 @@
 			color: $color-text;
 			font-size: 1.6rem;
 			padding-bottom: 3px;
+			@include mq("small") {
+				font-size: 1rem;
+			}
 		}
 		textarea {
 			display: block;
@@ -44,12 +62,19 @@
 			border-bottom: 1px solid $color-text;
 			color: $color-text;
 			font-size: 1.6rem;
+			@include mq("small") {
+				font-size: 1rem;
+			}
 		}
 	}
 
 	.form-message {
 		width: 100%;
 		margin: 40px 0;
+		@include mq("small") {
+			margin: 0;
+			margin-bottom: 20px;
+		}
 	}
 
 	.btn-submit {
@@ -63,6 +88,9 @@
 		padding: 0 0 5px 0;
 		font-family: $font-family--primary;
 		cursor: pointer;
+		@include mq("small") {
+			font-size: 1rem;
+		}
 		&:after {
 			display: block;
 			content: "";
@@ -86,6 +114,9 @@
 	margin-top: 30px;
 	width: 30%;
 	display: flex;
+	@include mq("small") {
+		width: 60%;
+	}
 	.sns__item {
 		width: 25%;
 		a {
@@ -96,4 +127,3 @@
 		}
 	}
 }
-

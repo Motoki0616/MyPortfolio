@@ -24,20 +24,40 @@
 	transform: translateY(0);
 }
 
-.loading-bar {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  height: 1px;
-  width: 90%;
-  background-color: $color-key;
-  visibility: hidden;
-  transition: visibility 0s 0.4s, transform 0.4s;
-  transform: translate(-50%,-50%);
-  z-index: 1700;
+.loading-bar{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	height: 1px;
+	width: 90%;
+	background-color: $color-key;
+	transform: scale(1) rotateZ(0);
+	opacity: 0;
+	transition: opacity 0s 0.4s, transform 0.4s;
+	z-index: 1700;
 }
+
 .loading-bar.page-is-changing {
-  visibility: visible;
-  transform: translate(-50%,-50%) scaleX(0.1) ;
-  transition: visibility 0s, transform 0.4s;
+	opacity: 1;
+	transform: scale(0.1);
+	transition: opacity 0s, transform 0.4s;
+	animation: spin 2s 0.6s;
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(0.1) rotate(0);
+  }
+  25% {
+    transform: scale(0.1) rotate(360deg);
+  }
+  50% {
+    transform: scale(0.1) rotate(0);
+  }
+  100% {
+    transform: scale(0.1) rotate(360deg);
+  }
 }
