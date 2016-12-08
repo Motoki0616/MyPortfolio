@@ -16,23 +16,27 @@
 		font-size: 1.6rem;
 		font-family: $font-family--secondary;
 		line-height: 1.5em;
+		@include mq("small") {
+			font-size: 1rem;
+		}
 	}
 }
 .aboutme__left {
 	width: 40%;
-	margin-top: 25vh;
+	padding-top: 25vh;
 	@include mq("medium") {
 		width: 100%;
 		margin-bottom: 50px;
-		margin-top: 20px;
+		padding-top: 20px;
 	}
 }
 .aboutme__right {
 	position: relative;
 	width: 45%;
-	margin-top: 20vh;
+	padding-top: 20vh;
 	@include mq("medium") {
 		width: 100%;
+		padding-top: 12vh;
 	}
 	h2 {
 		font-size: 8rem;
@@ -43,6 +47,9 @@
     	right: 0;
     	z-index: 100;
     	margin-top: 50px;
+		@include mq("small") {
+			font-size: 5rem;
+		}
 	}
 	.photo-myself img {
 		width: 75%;

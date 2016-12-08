@@ -1,22 +1,24 @@
 .contact {
 	width: 90%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
+	height: calc(100vh - 60px);
+	margin: 0 auto;
 	color: $color-text;
-	z-index: 200;
+	z-index: 100;
 	@include mq("medium") {
-		width: 80%;
+		// width: 80%;
+		// height: 100%;
+		// padding-bottom: 25vh;
+		height: calc(100vh - 30px);
 	}
 	h2 {
 		font-size: 3.5rem;
+		padding-top: 25vh;
 		margin-bottom: 40px;
 		letter-spacing: 0.03em;
 		@include mq("small") {
 			font-size: 2rem;
 			margin-bottom: 0px;
-			margin-top: 40px;
+			padding-top: 25vh;
 		}
 	}
 }
@@ -116,6 +118,7 @@
 	display: flex;
 	@include mq("small") {
 		width: 60%;
+		margin-top: 10px;
 	}
 	.sns__item {
 		width: 25%;

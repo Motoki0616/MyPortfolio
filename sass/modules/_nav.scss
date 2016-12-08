@@ -2,7 +2,7 @@
 
 }
 .navbar {
-	width: 90%;
+	width: 85%;
 	color: $color-key;
 	position: fixed;
 	left: 50%;
@@ -24,6 +24,7 @@
 	margin-left: 30px;
 	letter-spacing: 0.1em;
 	a {
+		display: block;
 		font-size: 1.3rem;
 		@include mq("medium") {
 			font-size: 1rem;
@@ -32,16 +33,17 @@
 			display: block;
 			content: "";
 			margin-top: 3px;
-			width: 100%;
+			width: 0;
 			height: 1px;
 			background-color: $color-key;
-			transform: scaleX(0);
+			-webkit-transform-origin: 0 50%;
 			transform-origin: 0 50%;
-			transition: all .2s linear;
+			-webkit-transition: width .2s linear;
+			transition: width .2s linear;
 		}
 		&:hover {
 			&:after {
-				transform: scaleX(1);
+				width: 100%;
 			}
 		}
 	}

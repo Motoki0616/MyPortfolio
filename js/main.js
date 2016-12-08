@@ -7,6 +7,7 @@ $(document).one('ready',function(){
 	var $logo = $('.logo');
 	var $mainTitle = $('.main-about__title');
 	var $mainDescription = $('.main-about__description');
+	var $mainImage = $('.img-container');
 
 	var tlBorder = new TimelineMax();
 	tlBorder
@@ -21,7 +22,8 @@ $(document).one('ready',function(){
 	.from($logo, 0.2, {y: '-20', opacity: 0, clearProps: 'all'})
 	.staggerFrom($navItem, 0.2, {y: '-20', opacity: 0, clearProps: 'all'}, 0.1)
 	.from($mainTitle, 0.2, {y: '-20', opacity: 0, clearProps: 'all'})
-	.from($mainDescription, 0.2, {y: '-20', opacity: 0, clearProps: 'all'});
+	.from($mainDescription, 0.2, {y: '-20', opacity: 0, clearProps: 'all'})
+	.from($mainImage, 3, {opacity: 0, clearProps: 'all'});
 
 });
 
@@ -44,12 +46,12 @@ $(document).ready(function() {
 					if ( $('.fp-enabled').length ) {
             			setTimeout (function () {
 							$.fn.fullpage.destroy('all');
-						}, 350);
+						}, 500);
         			}
 				}
 			},
 				onReady: {
-				duration: 1300,
+				duration: 100,
 					render: function ($container, $newContent) {
 					$container.html($newContent);
 					$('.cover').addClass('page-is-changing');
