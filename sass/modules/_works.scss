@@ -1,11 +1,3 @@
-#first-section.work {
-	background: url(images/bg.jpg) center center no-repeat;
-	background-size: cover;
-}
-#second-section.work {
-	background: url(images/bg2.jpg) center center no-repeat;
-	background-size: cover;
-}
 .work {
 	height: 100vh;
 	width: 100%;
@@ -55,11 +47,31 @@
 		@include mq("small") {
 			font-size: 1rem;
 		}
-	}
-	.btn-link a {
-		font-size: 1.4rem;
-		@include mq("small") {
-			font-size: 1rem;
+		.more-link {
+			font-family: $font-family--primary;
+			display: inline-block;
+			font-size: 1.4rem;
+			margin-top: 20px;
+			&:after {
+				display: block;
+				content: "";
+				margin-top: 3px;
+				width: 0;
+				height: 1px;
+				background-color: $color-key;
+				-webkit-transform-origin: 0 50%;
+				transform-origin: 0 50%;
+				-webkit-transition: width .2s linear;
+				transition: width .2s linear;
+			}
+			&:hover {
+				&:after {
+					width: 100%;
+				}
+			}
+			@include mq("small") {
+				font-size: 1rem;
+			}
 		}
 	}
 }

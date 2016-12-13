@@ -18,7 +18,7 @@
 		@include mq("small") {
 			font-size: 2rem;
 			margin-bottom: 0px;
-			padding-top: 25vh;
+			padding-top: 15vh;
 		}
 	}
 }
@@ -79,6 +79,12 @@
 		}
 	}
 
+	.form-button {
+		width: 30%;
+		@include mq("small") {
+			width: 20%;
+		}
+	}
 	.btn-submit {
 		display: block;
 		background-color: transparent;
@@ -129,4 +135,42 @@
 			}
 		}
 	}
+}
+
+//Contact Form 7
+span.wpcf7-not-valid-tip {
+	font-size: 1.2rem;
+	letter-spacing: 0.1em;
+	margin-top: 5px;
+	@include mq("small") {
+		font-size: 1rem;
+	}
+}
+div.wpcf7-response-output {
+	font-size: 1.2rem;
+	letter-spacing: 0.1em;
+	color: #f00;
+	width: 50%;
+	margin: 0;
+	text-align: right;
+	@include mq("small") {
+		font-size: 1rem;
+		width: 70%;
+	}
+}
+div.wpcf7-mail-sent-ok {
+	border: none;
+	color: $color-text;
+}
+
+div.wpcf7-mail-sent-ng {
+	border: none;
+}
+
+div.wpcf7-spam-blocked {
+	border: none;
+}
+
+div.wpcf7-validation-errors {
+	border: none;
 }

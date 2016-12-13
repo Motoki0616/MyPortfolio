@@ -77,7 +77,7 @@
 	}
 }
 
-.desktop-image img {
+.work-image img {
 	margin: 100px 0;
 	@include mq("medium") {
 		margin: 50px 0;
@@ -87,15 +87,6 @@
 	}
 }
 
-.mobile-image {
-	margin-top: 100px;
-	@include mq("medium") {
-		margin-top: 50px;
-	}
-	@include mq("small") {
-		margin: 30px 0;
-	}
-}
 
 .navigation {
 	margin: 100px 0;
