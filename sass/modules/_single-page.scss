@@ -1,6 +1,7 @@
 .work-detail {
 	color: $color-text;
 	width: 70%;
+	max-width: 1000px;
 	margin: 150px auto 0;
 	@include mq("small") {
 		width: 80%;
@@ -35,50 +36,105 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	.work-information__left-container {
-		width: 60%;
+}
+
+.work-information__left-container {
+	width: 60%;
+	@include mq("small") {
+		width: 100%;
+		order: 2;
+		margin-top: 10px;
+	}
+	p {
+		font-size: 1.4rem;
+		letter-spacing: 0.03em;
+		line-height: 1.5em;
+		font-family: $font-family--secondary;
+		margin-bottom: 30px;
 		@include mq("small") {
-			width: 100%;
-			order: 2;
-			margin-top: 10px;
-		}
-		p {
-			font-size: 1.4rem;
-			letter-spacing: 0.03em;
-    		line-height: 1.5em;
-			font-family: $font-family--secondary;
 			margin-bottom: 30px;
-			@include mq("small") {
-				margin-bottom: 15px;
-			}
-		}
-		p.btn {
-			margin-bottom: 0;
 		}
 	}
-	.work-information__right-container {
-		width: 30%;
+
+	.btn a{
+		display: block;
+		font-family: $font-family--primary;
+		font-size: 1.2rem;
+		text-align: center;
+		padding: 10px 0;
+		color: $color-key;
+  		max-width: 160px;
+		width: 100%;
+		vertical-align: middle;
+		margin-top: 35px;
+		position: relative;
 		@include mq("small") {
-			width: 100%;
-			order: 1;
-			margin-top: 35px;
+			padding: 5px 0;
+
 		}
-		dt {
+  		svg {
+		    height: 40px;
+		    left: 0;
+		    position: absolute;
+		    top: 0;
+		    width: 100%;
+			@include mq("small") {
+				height: 30px;
+			}
+  		}
+		rect {
+			fill: none;
+			stroke: $color-key;
+			stroke-width: 2;
+			stroke-dasharray: 422, 0;
+			transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+		}
+		&:hover {
+		  rect {
+		    stroke-dasharray: 15, 310;
+		    stroke-dashoffset: 48;
+		    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+			@include mq("small") {
+				stroke-dasharray: 15, 300;
+			}
+		  }
+		}
+		@include mq("small") {
+			margin-top: 20px;
 			font-size: 1rem;
-			letter-spacing: 0.05em;
-    		line-height: 1em;
-			margin-bottom: 10px;
 		}
-		dd {
+	}
+}
+
+.work-information__right-container {
+	width: 30%;
+	@include mq("small") {
+		width: 100%;
+		order: 1;
+		margin-top: 30px;
+	}
+	dt {
+		font-size: 1.6rem;
+		letter-spacing: 0.05em;
+		line-height: 1em;
+		margin-bottom: 10px;
+		@include mq("small") {
 			font-size: 1.4rem;
-			font-family: $font-family--secondary;
+		}
+	}
+	dd {
+		font-size: 1.4rem;
+		font-family: $font-family--secondary;
+		margin-bottom: 30px;
+		@include mq("small") {
 			margin-bottom: 20px;
 		}
 	}
 }
 
 .work-image img {
-	margin: 100px 0;
+	margin: 80px 0;
+	box-shadow: 0 35px 50px 0 rgba(0, 0, 0, 0.4);
 	@include mq("medium") {
 		margin: 50px 0;
 	}
@@ -90,16 +146,37 @@
 
 .navigation {
 	margin: 100px 0;
+	display: flex;
+	justify-content: space-between;
 	@include mq("medium") {
 		margin: 50px 0;
 	}
 	p {
-		display: inline-block;
-		margin-right: 20px;
+		svg {
+			width: 30px;
+			height: 14px;
+			transform: translateY(1px);
+			@include mq("small") {
+				width: 20px;
+				height: 10px;
+			}
+		}
 		a {
 			font-size: 1.4rem;
+			display: block;
+			transform: translateX(0);
+			transition: transform 0.3s;
 			@include mq("small") {
 				font-size: 1rem;
+			}
+			&:hover {
+				transform: translateX(-10px);
+			}
+		}
+
+		&:last-child a {
+			&:hover {
+				transform: translateX(10px);
 			}
 		}
 	}

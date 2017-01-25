@@ -1,5 +1,6 @@
 .aboutme {
 	width: 70%;
+	max-width: 900px;
 	height: calc(100vh - 60px);
 	margin: 0 auto;
 	color: $color-text;
@@ -9,8 +10,7 @@
 	@include mq("medium") {
 		width: 80%;
 		height: 100%;
-		flex-direction: column-reverse;
-		justify-content: center;
+		flex-direction: column;
 	}
 	p {
 		font-size: 1.6rem;
@@ -20,44 +20,70 @@
 			font-size: 1rem;
 		}
 	}
+	h5 {
+		font-size: 1.6rem;
+		margin: 15px 0 5px;
+		letter-spacing: 0.05em;
+		@include mq("small") {
+			font-size: 1rem;
+		}
+	}
 }
 .aboutme__left {
-	width: 40%;
-	padding-top: 25vh;
+	width: 50%;
+	padding-top: 30vh;
 	order: 1;
 	@include mq("medium") {
 		width: 100%;
 		margin-bottom: 50px;
 		padding-top: 20px;
+		order: 2;
+	}
+	h2 {
+		font-size: 6rem;
+    	letter-spacing: 0.03em;
+    	line-height: 1em;
+    	margin-bottom: 30px;
+		@include mq("medium"){
+			margin-bottom: 15px;
+			font-size: 4.5rem;
+		}
+		@include mq("small") {
+			font-size: 3rem;
+		}
 	}
 }
 .aboutme__right {
+	width: 40%;
+	height: 100%;
 	position: relative;
-	width: 45%;
-	padding-top: 20vh;
 	order: 2;
 	@include mq("medium") {
+		margin-bottom: 20px;
+		margin-top: 15vh;
 		width: 100%;
-		padding-top: 12vh;
+		order: 1;
 	}
-	h2 {
-		font-size: 8rem;
-    	margin-bottom: 40px;
-    	letter-spacing: 0.03em;
-    	line-height: 1em;
-    	position: absolute;
-    	right: 0;
-    	z-index: 100;
-    	margin-top: 50px;
-		@include mq("small") {
-			font-size: 5rem;
+	.image__container {
+		position: absolute;
+		top: 150px;
+		right: 0;
+		@include mq("medium") {
+			position: static;
+			top: 100px;
+			right: auto;
+		}
+		img {
+			max-width: 300px;
+			max-height: 422px;
 		}
 	}
-	.photo-myself img {
-		width: 75%;
-		max-width: 480px;
-		@include mq("medium") {
-			width: 80%;
+	.sns {
+		@include mq("small") {
+			margin-top: 30px;
+		}
+		.sns__item {
+			margin-right: 40px;
 		}
 	}
 }

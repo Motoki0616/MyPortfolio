@@ -1,10 +1,13 @@
 <?php
 
-//Changing the_content Class
-function change_the_content_class($content){
-    return preg_replace('/<p([^>]+)?>/', '<p$1 class="company-description">', $content, 1);
+//Adding custom Class to the excerpt
+function add_excerpt_class( $excerpt )
+{
+    $excerpt = str_replace( "<p", "<p class=\"work__text\"", $excerpt );
+    return $excerpt;
 }
-add_filter('the_content', 'change_the_content_class');
+
+add_filter( "the_excerpt", "add_excerpt_class" );
 
 //Adding Menu
 add_theme_support( 'menus' );

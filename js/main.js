@@ -1,5 +1,6 @@
 (function($) {
 
+	// First Page Animation
 	$(document).one('ready',function(){
 		var $borderTop = $('.border-box__top');
 		var $borderRight = $('.border-box__right');
@@ -17,7 +18,7 @@
 		.set($borderRight, {scale: 0, opacity: 0})
 		.set($borderBottom, {scale: 0, opacity: 0})
 		.set($borderLeft, {scale: 0, opacity: 0})
-		.to($borderTop, 0.2, {scale: 1, opacity: 1}, '+=0.3')
+		.to($borderTop, 0.2, {scale: 1, opacity: 1}, '+=1')
 		.to($borderRight, 0.2, {scale: 1, opacity: 1})
 		.to($borderBottom, 0.2, {scale: 1, opacity: 1})
 		.to($borderLeft, 0.2, {scale: 1, opacity: 1})
@@ -25,11 +26,14 @@
 		.staggerFrom($navItem, 0.2, {y: '-20', opacity: 0, clearProps: 'all'}, 0.1)
 		.from($mainTitle, 0.2, {y: '-20', opacity: 0, clearProps: 'all'})
 		.from($mainDescription, 0.2, {y: '-20', opacity: 0, clearProps: 'all'})
-		.from($mainImage, 3, {opacity: 0, clearProps: 'all'});
+		.from($mainImage, 2, {opacity: 0, clearProps: 'all'});
 
 	});
 
+
+	// Page Transition Animation
 	$(document).ready(function() {
+		$('body').addClass('loaded');
 		$('body').onPageLoad();
 
 		var $page = $('#wrapper'),
@@ -76,39 +80,59 @@
 				smoothState = $page.smoothState(options).data('smoothState');
 	});
 
-		$.fn.onPageLoad = function() {
-		$('#fullpage').fullpage({
-		navigation: true,
-		navigationPosition: 'left',
-		scrollingSpeed: 500,
-		onLeave: function(index, nextIndex, direction){
-		var leavingSection = $(this);
-		var $companyName = $('.company-name');
-		var $description = $('.company-description');
-		var $textCase = $('.text-case');
-		var $btn = $('.company-description a');
+	$.fn.onPageLoad = function() {
+		var $workName = $('.work__name');
+		var $description = $('.work__text');
+		var $textCase = $('.work__case');
+		var $btn = $('.btn__morelink');
+		function goingDown() {
+			var tl = new TimelineLite();
+			tl
+			.from($textCase, 0.3, {y: 80, opacity: 0, clearProps: 'all'}, '+=0.5')
+			.from($workName, 0.3, {y: 80, opacity: 0, clearProps: 'all'}, '-=0.2')
+			.from($description, 0.3, {y: 80, opacity: 0, clearProps: 'all'}, '-=0.3')
+			.from($btn, 0.3, {y: 80, opacity: 0, clearProps: 'all'}, '-=0.2');
+		}
 
-		//after leaving section 2
-		if(index == 1 && direction =='down'){
-		var tl = new TimelineLite();
-		tl
-		.from($textCase, 0.3, {y: 80, opacity: 0}, '+0.5')
-		.from($companyName, 0.3, {y: 80, opacity: 0}, '-=0.2')
-		.from($description, 0.3, {y: 80, opacity: 0}, '-=0.3')
-		.from($btn, 0.3, {y: 80, opacity: 0}, '-=0.2');
+		function goingUp() {
+			var tl2 = new TimelineLite();
+			tl2
+			.from($textCase, 0.3, {y: -80, opacity: 0, clearProps: 'all'}, '+=0.5')
+			.from($workName, 0.3, {y: -80, opacity: 0, clearProps: 'all'}, '-=0.2')
+			.from($description, 0.3, {y: -80, opacity: 0, clearProps: 'all'}, '-=0.3')
+			.from($btn, 0.3, {y: -80, opacity: 0, clearProps: 'all'}, '-=0.2');
 		}
-		else if(index == 2 && direction == 'up'){
-		var tl2 = new TimelineLite();
-		tl2
-		.from($textCase, 0.3, {y: -80, opacity: 0}, '+0.5')
-		.from($companyName, 0.3, {y: -80, opacity: 0}, '-=0.2')
-		.from($description, 0.3, {y: -80, opacity: 0}, '-=0.3')
-		.from($btn, 0.3, {y: -80, opacity: 0}, '-=0.2');
-		}
-		}
+
+		$('#fullpage').fullpage({
+			navigation: true,
+			navigationPosition: 'left',
+			scrollingSpeed: 600,
+			onLeave: function(index, nextIndex, direction){
+				var leavingSection = $(this);
+
+				if(index == 1 && direction =='down'){
+					goingDown();
+				}
+				else if(index == 2 && direction == 'up'){
+					goingUp();
+				}
+				else if(index == 2 && direction == 'down'){
+					goingDown();
+				}
+				else if(index == 3 && direction == 'up'){
+					goingUp();
+				}
+				else if(index == 3 && direction == 'down'){
+					goingDown();
+				}
+				else if(index == 4 && direction == 'up'){
+					goingUp();
+				}
+
+			}
 		});
 
-	}
+}
 
 
 })( jQuery );
