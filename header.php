@@ -10,9 +10,9 @@
 <body>
 <div id="loader-wrapper"></div>
 <div id="wrapper">
-	<div class="loading-bar"></div>
-	<div class="cover"></div>
-	<div class="cover2"></div>
+    	<div class="loading-bar"></div>
+    	<div class="cover"></div>
+    	<div class="cover2"></div>
 	<header>
 		<nav class="navbar">
 		<h1 class="logo"><a href="<?php bloginfo('url');?>"><?php bloginfo('title');?></a></h1>

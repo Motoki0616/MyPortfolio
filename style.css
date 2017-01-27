@@ -40,9 +40,9 @@ img { width: 100%; height: auto; display: block; }
 
 @media (max-width: 950px) { .box-line { width: calc(100% - 30px); height: calc(100% - 30px); margin: 15px 0 15px 15px; } }
 
-.border-box { position: fixed; top: 30px; left: 30px; right: 30px; bottom: 30px; overflow: hidden; z-index: 2; }
+.border-box { width: calc(100% - 60px); height: calc(100vh - 60px); margin: 30px 0 30px 30px; position: relative; z-index: 2; }
 
-@media (max-width: 950px) { .border-box { top: 15px; left: 15px; right: 15px; bottom: 15px; } }
+@media (max-width: 950px) { .border-box { width: calc(100% - 30px); height: calc(100vh - 30px); margin: 15px 0 15px 15px; } }
 
 .border-box > div { position: absolute; background-color: #8D742A; }
 
@@ -88,7 +88,7 @@ main { overflow: hidden; }
 
 .img-container { width: 100%; height: 100%; position: absolute; top: 0; }
 
-.img-container img { width: 110%; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); opacity: 0.1; }
+.img-container img { width: 100%; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); opacity: 0.1; }
 
 .work { height: 100vh; width: 100%; color: #fff; }
 
@@ -157,7 +157,7 @@ main { overflow: hidden; }
 
 .contact-form .form-group label { display: block; width: 80px; font-size: 1.6rem; letter-spacing: 0.04em; margin-bottom: 10px; }
 
-@media (max-width: 500px) { .contact-form .form-group label { font-size: 1rem; margin-top: 40px; } }
+@media (max-width: 500px) { .contact-form .form-group label { font-size: 1rem; margin-top: 20px; } }
 
 .contact-form .form-group input { display: block; background-color: transparent; border: none; border-bottom: 1px solid #c0c0c0; width: 100%; color: #c0c0c0; font-size: 1.6rem; padding-bottom: 3px; }
 
@@ -165,7 +165,7 @@ main { overflow: hidden; }
 
 .contact-form .form-group textarea { display: block; width: 100%; height: 50px; background-color: transparent; border: none; border-bottom: 1px solid #c0c0c0; color: #c0c0c0; font-size: 1.6rem; }
 
-@media (max-width: 500px) { .contact-form .form-group textarea { font-size: 1rem; } }
+@media (max-width: 500px) { .contact-form .form-group textarea { font-size: 1rem; height: 30px; } }
 
 .contact-form .form-message { width: 100%; margin: 40px 0; }
 
@@ -245,13 +245,13 @@ div.wpcf7-validation-errors { border: none; }
 
 .aboutme__right .sns .sns__item { margin-right: 40px; }
 
-#loader-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; background: #08192D; }
+#loader-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; background: #08192D; }
 
 .loaded #loader-wrapper { visibility: hidden; display: none; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
 
-.cover { width: 100%; height: 50vh; background-color: #08192D; position: fixed; top: 0; left: 0; z-index: 1600; transform: translateY(-100%); transition: all 0.5s; }
+.cover { width: 100%; height: 50%; background-color: #08192D; position: fixed; top: 0; left: 0; z-index: 1600; transform: translateY(-100%); transition: all 0.5s; }
 
-.cover2 { width: 100%; height: 50vh; bottom: 0; left: 0; background-color: #08192D; position: fixed; z-index: 1600; transform: translateY(100%); transition: all 0.5s; }
+.cover2 { width: 100%; height: 50%; bottom: 0; left: 0; background-color: #08192D; position: fixed; z-index: 1600; transform: translateY(100%); transition: all 0.5s; }
 
 .cover.page-is-changing, .cover2.page-is-changing { transform: translateY(0); }
 

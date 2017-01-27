@@ -11,18 +11,15 @@
 	}
 }
 .border-box {
-	position: fixed;
-    top: 30px;
-    left: 30px;
-    right: 30px;
-    bottom: 30px;
-    overflow: hidden;
+	width: calc(100% - 60px);
+	height: calc(100vh - 60px);
+	margin: 30px 0 30px 30px;
+	position: relative;
     z-index: 2;
 	@include mq("medium") {
-		top: 15px;
-	    left: 15px;
-	    right: 15px;
-	    bottom: 15px;
+		width: calc(100% - 30px);
+		height: calc(100vh - 30px);
+		margin: 15px 0 15px 15px;
 	}
 	> div {
 		position: absolute;
