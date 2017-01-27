@@ -139,13 +139,15 @@ main { overflow: hidden; }
 
 @media (max-width: 500px) { #fp-nav ul li:hover a span { height: 25px; width: 5px; } }
 
-.contact { width: 90%; max-width: 1200px; height: calc(100vh - 60px); margin: 0 auto; color: #c0c0c0; z-index: 100; }
+.contact { width: 90%; max-width: 1200px; height: calc(100vh - 60px); color: #c0c0c0; z-index: 100; margin: 0 auto; position: relative; }
 
 @media (max-width: 950px) { .contact { height: calc(100vh - 30px); } }
 
-.contact h2 { font-size: 3.5rem; padding-top: 25vh; margin-bottom: 40px; letter-spacing: 0.03em; }
+.contact .contact__container { width: 100%; position: absolute; top: 50%; transform: translateY(-50%); }
 
-@media (max-width: 500px) { .contact h2 { font-size: 2rem; margin-bottom: 0px; padding-top: 15vh; } }
+.contact h2 { font-size: 3.5rem; margin-bottom: 40px; letter-spacing: 0.03em; }
+
+@media (max-width: 500px) { .contact h2 { font-size: 2rem; margin-bottom: 0px; } }
 
 .contact-form { display: flex; flex-wrap: wrap; justify-content: space-between; }
 
@@ -215,9 +217,13 @@ div.wpcf7-validation-errors { border: none; }
 
 @media (max-width: 500px) { .aboutme h5 { font-size: 1rem; } }
 
-.aboutme__left { width: 50%; padding-top: 30vh; order: 1; }
+.aboutme__left { width: 50%; height: 100%; position: relative; order: 1; }
 
 @media (max-width: 950px) { .aboutme__left { width: 100%; margin-bottom: 50px; padding-top: 20px; order: 2; } }
+
+.aboutme__left .content__container { position: absolute; top: 50%; transform: translateY(-50%); }
+
+@media (max-width: 950px) { .aboutme__left .content__container { position: static; transform: translateY(0); } }
 
 .aboutme__left h2 { font-size: 6rem; letter-spacing: 0.03em; line-height: 1em; margin-bottom: 30px; }
 
@@ -229,9 +235,9 @@ div.wpcf7-validation-errors { border: none; }
 
 @media (max-width: 950px) { .aboutme__right { margin-bottom: 20px; margin-top: 15vh; width: 100%; order: 1; } }
 
-.aboutme__right .image__container { position: absolute; top: 150px; right: 0; }
+.aboutme__right .image__container { position: absolute; top: 50%; right: 0; transform: translateY(-50%); }
 
-@media (max-width: 950px) { .aboutme__right .image__container { position: static; top: 100px; right: auto; } }
+@media (max-width: 950px) { .aboutme__right .image__container { position: static; top: 100px; right: auto; transform: translateY(0); } }
 
 .aboutme__right .image__container img { max-width: 300px; max-height: 422px; }
 

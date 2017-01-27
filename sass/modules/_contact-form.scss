@@ -2,24 +2,26 @@
 	width: 90%;
 	max-width: 1200px;
 	height: calc(100vh - 60px);
-	margin: 0 auto;
 	color: $color-text;
 	z-index: 100;
+	margin: 0 auto;
+	position: relative;
 	@include mq("medium") {
-		// width: 80%;
-		// height: 100%;
-		// padding-bottom: 25vh;
 		height: calc(100vh - 30px);
+	}
+	.contact__container {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 	h2 {
 		font-size: 3.5rem;
-		padding-top: 25vh;
 		margin-bottom: 40px;
 		letter-spacing: 0.03em;
 		@include mq("small") {
 			font-size: 2rem;
 			margin-bottom: 0px;
-			padding-top: 15vh;
 		}
 	}
 }

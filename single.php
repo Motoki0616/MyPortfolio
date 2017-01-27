@@ -26,10 +26,10 @@
                 </div>
 
                 <div class="navigation">
-                    <p><?php previous_post_link( '%link', '<svg viewBox="0 0 50 80" xml:space="preserve">
+                    <p><?php next_post_link('%link','<svg viewBox="0 0 50 80" xml:space="preserve">
                         <polyline fill="none" stroke="#8D742A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/>
-                        </svg>' . 'Previous Work'); ?></p>
-                    <p><?php next_post_link('%link', 'Next Work' . '<svg viewBox="0 0 50 80" xml:space="preserve">
+                        </svg>'.'Previous Work'); ?></p>
+                    <p><?php previous_post_link( '%link', 'Next Work' . '<svg viewBox="0 0 50 80" xml:space="preserve">
                         <polyline fill="none" stroke="#8D742A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/>
                         </svg>'); ?></p>
                 </div>

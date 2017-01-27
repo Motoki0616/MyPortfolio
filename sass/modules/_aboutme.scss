@@ -31,13 +31,23 @@
 }
 .aboutme__left {
 	width: 50%;
-	padding-top: 30vh;
+	height: 100%;
+	position: relative;
 	order: 1;
 	@include mq("medium") {
 		width: 100%;
 		margin-bottom: 50px;
 		padding-top: 20px;
 		order: 2;
+	}
+	.content__container {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		@include mq("medium") {
+			position: static;
+			transform: translateY(0);
+		}
 	}
 	h2 {
 		font-size: 6rem;
@@ -66,12 +76,14 @@
 	}
 	.image__container {
 		position: absolute;
-		top: 150px;
+		top: 50%;
 		right: 0;
+		transform: translateY(-50%);
 		@include mq("medium") {
 			position: static;
 			top: 100px;
 			right: auto;
+			transform: translateY(0);
 		}
 		img {
 			max-width: 300px;

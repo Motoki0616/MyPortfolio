@@ -8,6 +8,7 @@
 <main>
     <div class="box-line">
     <section class="contact">
+        <div class="contact__container">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <h2><?php the_title(); ?></h2>
             <?php the_content(); ?>
@@ -17,6 +18,7 @@
             <li class="sns__item"><a href="https://github.com/Motoki0616" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
             <li class="sns__item"><a href="https://twitter.com/motonai6" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
         </ul>
+        </div>
     </section>
     </div>
 </main>

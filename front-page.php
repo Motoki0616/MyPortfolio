@@ -12,11 +12,11 @@
         <div class="img-container">
             <img src="<?php echo get_template_directory_uri(); ?>/images/bg-front.png" alt="motoki natio">
         </div>
+		<div class="border-box">
+	    <div class="border-box__top"></div>
+	    <div class="border-box__right"></div>
+	    <div class="border-box__bottom"></div>
+	    <div class="border-box__left"></div>
+	    </div>
 	</main>
-    <div class="border-box">
-    <div class="border-box__top"></div>
-    <div class="border-box__right"></div>
-    <div class="border-box__bottom"></div>
-    <div class="border-box__left"></div>
-    </div>
 <?php get_footer();?>
