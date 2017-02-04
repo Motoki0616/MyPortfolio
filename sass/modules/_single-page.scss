@@ -1,4 +1,4 @@
-.work-detail {
+.project-detail {
 	color: $color-text;
 	width: 70%;
 	max-width: 1000px;
@@ -32,13 +32,13 @@
 	}
 }
 
-.work-information {
+.project-information {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
-.work-information__left-container {
+.project-information__left-container {
 	width: 60%;
 	@include mq("small") {
 		width: 100%;
@@ -106,7 +106,7 @@
 	}
 }
 
-.work-information__right-container {
+.project-information__right-container {
 	width: 30%;
 	@include mq("small") {
 		width: 100%;
@@ -132,7 +132,7 @@
 	}
 }
 
-.work-image img {
+.project-image img {
 	margin: 80px 0;
 	box-shadow: 0 35px 50px 0 rgba(0, 0, 0, 0.4);
 	@include mq("medium") {

@@ -3,7 +3,7 @@
 //Adding custom Class to the excerpt
 function add_excerpt_class( $excerpt )
 {
-    $excerpt = str_replace( "<p", "<p class=\"work__text\"", $excerpt );
+    $excerpt = str_replace( "<p", "<p class=\"project__text\"", $excerpt );
     return $excerpt;
 }
 

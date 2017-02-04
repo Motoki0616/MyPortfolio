@@ -35,6 +35,9 @@
 		display: block;
 		font-size: 1.3rem;
 		@include mq("medium") {
+			font-size: 1.2rem;
+		}
+		@include mq("small") {
 			font-size: 1rem;
 		}
 		&:after {

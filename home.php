@@ -13,12 +13,12 @@
             $thumbnail_data = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full');
             $thumbnail_url = $thumbnail_data[0];
         ?>
-            <section class="work section" style="background: url('<?php echo $thumbnail_url ?>') center left no-repeat; background-size: cover;">
+            <section class="project section" style="background: url('<?php echo $thumbnail_url ?>') center left no-repeat; background-size: cover;">
             <div class="box-line">
                 <div class="bcg-shadow clearfix">
-                <div class="work__container">
-                    <p class="work__case">Case</p>
-                    <h2 class="work__name"><?php the_title(); ?></h2>
+                <div class="project__container">
+                    <p class="project__case">Case</p>
+                    <h2 class="project__name"><?php the_title(); ?></h2>
                     <?php the_excerpt(); ?>
                     <p class="btn__morelink"><a href="<?php echo get_permalink(); ?>">More Detail</a></p>
                 </div>

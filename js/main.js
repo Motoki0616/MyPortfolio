@@ -81,15 +81,15 @@
 	});
 
 	$.fn.onPageLoad = function() {
-		var $workName = $('.work__name');
-		var $description = $('.work__text');
-		var $textCase = $('.work__case');
+		var $projectName = $('.project__name');
+		var $description = $('.project__text');
+		var $textCase = $('.project__case');
 		var $btn = $('.btn__morelink');
 		function goingDown() {
 			var tl = new TimelineLite();
 			tl
 			.from($textCase, 0.3, {y: 80, opacity: 0, clearProps: 'all'}, '+=0.5')
-			.from($workName, 0.3, {y: 80, opacity: 0, clearProps: 'all'}, '-=0.2')
+			.from($projectName, 0.3, {y: 80, opacity: 0, clearProps: 'all'}, '-=0.2')
 			.from($description, 0.3, {y: 80, opacity: 0, clearProps: 'all'}, '-=0.3')
 			.from($btn, 0.3, {y: 80, opacity: 0, clearProps: 'all'}, '-=0.2');
 		}
@@ -98,7 +98,7 @@
 			var tl2 = new TimelineLite();
 			tl2
 			.from($textCase, 0.3, {y: -80, opacity: 0, clearProps: 'all'}, '+=0.5')
-			.from($workName, 0.3, {y: -80, opacity: 0, clearProps: 'all'}, '-=0.2')
+			.from($projectName, 0.3, {y: -80, opacity: 0, clearProps: 'all'}, '-=0.2')
 			.from($description, 0.3, {y: -80, opacity: 0, clearProps: 'all'}, '-=0.3')
 			.from($btn, 0.3, {y: -80, opacity: 0, clearProps: 'all'}, '-=0.2');
 		}
