@@ -13,17 +13,17 @@ see http://motokinaito.com for more details.
 
 ## My web design process
 ### 1. Planning
-**Setting a Goal** - My goal is to tell What I can do and Who I am through this portfolio site.　　
-**Color** - As a main color, I used dark blue that symbolizes trust because It's important for me to build trust with clients and coworkers. As a key color, I used dark yellow that is complementary color of blue.
+**Setting a Goal** - My goal is to tell What I can do and Who I am through this portfolio site.  
+**Color** - As a main color, I used dark blue that symbolizes trust because It's important for me to build trust with clients and coworkers. As a key color, I used dark yellow that is complementary color of blue.  
 
 ### 2. Design
-**Wireframe** - I usually make a wireframe using a pen and paper because There's nothing quicker than grabbing a pen and paper.
-**Mock-up** - Photoshop
+**Wireframe** - I usually make a wireframe using a pen and paper because There's nothing quicker than grabbing a pen and paper.  
+**Mock-up** - Photoshop  
 
 ### 3. Development
-**Coding** - A text editor I'm using is Atom.
-**Why GSAP** - GSAP is literally up to 20x faster than jQuery. It's even faster than CSS3 animations and transitions in many cases. I can avoid browser bugs.
-**Why smoothState.js** - Changing from one page to another will often cause this interruption by showing a white flash of no content.Transitions between pages can enhance the experience by retaining the user’s context, maintaining their attention, and providing visual continuity so I used smoothState.js and GSAP for page transtion animation.
+**Coding** - A text editor I'm using is Atom.  
+**Why GSAP** - GSAP is literally up to 20x faster than jQuery. It's even faster than CSS3 animations and transitions in many cases. I can avoid browser bugs.  
+**Why smoothState.js** - Changing from one page to another will often cause this interruption by showing a white flash of no content.Transitions between pages can enhance the experience by retaining the user’s context, maintaining their attention, and providing visual continuity so I used smoothState.js and GSAP for page transtion animation.  
 
 ## Code architecture for CSS
 * BEM (http://getbem.com/naming)
