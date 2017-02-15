@@ -13,11 +13,16 @@ see http://motokinaito.com for more details.
 
 ## My web design process
 1. Planning
+Setting a Goal - My goal is to tell What I can do and Who I am through this portfolio site.　　
+
+
 
 2. Design
+Wireframe - I usually make a wireframe using a pen and paper because There's nothing quicker than grabbing a pen and paper.
+Mock-up - Photoshop
 
 3. Development
-
+Coding
 
 ## Code architecture for CSS
 * BEM (http://getbem.com/naming)
