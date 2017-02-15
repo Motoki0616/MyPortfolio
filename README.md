@@ -7,7 +7,7 @@ see http://motokinaito.com for more details.
 
 
 ## What I used
-HTML / CSS / SASS / Wordpress / GSAP / smoothState.js / fullpage.js / Gulp
-GSAP - 
-smoothState.js - 
-fullpage.js -
+HTML / CSS / SASS / Wordpress / GSAP / smoothState.js / fullpage.js / Gulp  
+GSAP -   
+smoothState.js -   
+fullpage.js -  
