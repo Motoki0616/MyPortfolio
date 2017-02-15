@@ -6,9 +6,9 @@ see http://motokinaito.com for more details.
 * CSS
 * SASS
 * Wordpress
-* GSAP - Javascript Animation (https://greensock.com/gsap)
-* smoothState.js - jQuery plugin that progressively enhances pages to behave more like a single-page application.(https://github.com/miguel-perez/smoothState.js)
-* fullpage.js - Simple plugin for creating fullscreen scrolling websites (https://github.com/alvarotrigo/fullPage.js)
+* [GSAP](https://greensock.com/gsap) - Javascript Animation
+* [smoothState.js](https://github.com/miguel-perez/smoothState.js) - jQuery plugin that progressively enhances pages to behave more like a single-page application.
+* [fullpage.js](https://github.com/alvarotrigo/fullPage.js) - Simple plugin for creating fullscreen scrolling websites.
 * Gulp
 
 ## My web design process
