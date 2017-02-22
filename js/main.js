@@ -1,6 +1,6 @@
 (function($) {
 
-	// First Page Animation
+	// First Page Line Animation
 	$(document).one('ready',function(){
 		var $borderTop = $('.border-box__top');
 		var $borderRight = $('.border-box__right');
@@ -30,11 +30,9 @@
 
 	});
 
-
 	// Page Transition Animation
 	$(document).ready(function() {
 		$('body').addClass('loaded');
-		$('body').onPageLoad();
 
 		var $page = $('#wrapper'),
 				options = {
@@ -50,8 +48,10 @@
 							$('.loading-bar').addClass('page-is-changing');
 						}, 500);
 
+						// fp-enabled is added to the html element when fullpage.js is enabled.
 						if ( $('.fp-enabled').length ) {
 	            			setTimeout (function () {
+								// to avoid initalization more than twice
 								$.fn.fullpage.destroy('all');
 							}, 500);
 	        			}
@@ -74,17 +74,21 @@
 						}
 					},
 					onAfter : function($container) {
+							// to initalize fullpage.js library
 							$container.onPageLoad();
 					}
 				},
 				smoothState = $page.smoothState(options).data('smoothState');
 	});
 
+	// Fullpage.js Function
 	$.fn.onPageLoad = function() {
 		var $projectName = $('.project__name');
 		var $description = $('.project__text');
 		var $textCase = $('.project__case');
 		var $btn = $('.btn__morelink');
+
+		// Going down animation
 		function goingDown() {
 			var tl = new TimelineLite();
 			tl
@@ -94,6 +98,7 @@
 			.from($btn, 0.3, {y: 80, opacity: 0, clearProps: 'all'}, '-=0.2');
 		}
 
+		// Going up animation
 		function goingUp() {
 			var tl2 = new TimelineLite();
 			tl2
@@ -131,8 +136,5 @@
 
 			}
 		});
-
 }
-
-
 })( jQuery );
