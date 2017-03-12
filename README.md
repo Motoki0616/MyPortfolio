@@ -27,16 +27,9 @@ see http://motokinaito.com for more details.
 
 ## Code architecture for CSS
 * BEM (http://getbem.com/naming)
-* SMACSS (https://smacss.com)
 
 ### BEM
 The Block, Element, Modifier methodology (commonly referred to as BEM) is a popular naming convention for classes in HTML and CSS.
 * When we want to make a new style of a component, we can easily see which modifiers and children already exist.
 * When we are reading the markup instead of CSS, we can quickly get an idea of which element depends on another.
 * Designers and developers can consistently name components for easier communication between team members.
-
-### SMACSS
-SMACSS stands for Scalable and Modular Architecture for CSS.
-* Ease of demonstration and handover
-* Ease of reading
-* Scalable for all projects
